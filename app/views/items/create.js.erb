@@ -1,0 +1,7 @@
+
+$("#myCreateModal").modal('hide');
+$('.item-question').val('');
+$(".item-answer").val('');
+
+$('#container_items').prepend("<%= j render @item %>");
+$("#item_<%= @item.id %>").hide().fadeIn(1000);
