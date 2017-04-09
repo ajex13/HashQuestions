@@ -1,16 +1,5 @@
 
 <div class="col-md-8" id="item_<%= item.id %>">
-<!--
-  <div class="panel panel-primary item-body">
-
-    <div class="panel-heading"><label>Q:</label>&nbsp&nbsp<%= item.question %></div>
-    <div class="panel-body"><label>A:</label>&nbsp&nbsp<%= item.answer %></div>
-    <div class="panel-footer text-right">
-
-    </div>
-  </div>
--->
-
 
   <div class="panel-group">
   <div class="panel panel-default">
@@ -26,7 +15,7 @@
           <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myupdatepost_<%= item.id %>">
             Edit
           </button>
-          <%= link_to 'Destroy', item, method: :delete, class: "btn btn-danger", remote: true %>
+          <%= link_to 'Delete', item, :method => :delete, :class => "btn btn-danger", :remote => true %>
         </div>
       </div>
     </div>

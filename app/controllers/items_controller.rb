@@ -31,16 +31,19 @@ before_action :set_item, :only => [:show,:edit,:update,:destroy]
     respond_to do |response|
       if @item.update(item_params)
         response.html {redirect_to @item}
+        response.js
       else
         response.html {render 'edit'}
+        response.js
       end
     end
   end
 
   def destroy
-    @item.destroy_all
+    @item.destroy
     respond_to do |response|
         response.html {redirect_to items_path}
+        response.js
     end
   end
 
