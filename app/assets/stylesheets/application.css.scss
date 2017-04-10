@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
  .jumbotron {
      color: white !important;
      background-color: #ff554c !important;
@@ -22,5 +23,27 @@
 .navbar-brand {
   color: #ff554c !important;
   font-weight: 600;
+
+}
+.pagination li.active span {
+    background-color: #ff554c !important;
+    color: white;
+    border-color:  #ff554c !important;
+}
+
+.pagination  li.prev , li.next a {
+  color: #ff554c !important;
+}
+
+.pagination a {
+  color: #ff554c !important;
+
+}
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
 
 }

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get 'sets/index'
   post 'sets/upload_file' => 'sets#upload_file'
   post 'sets/download_file' => 'sets#download_file'

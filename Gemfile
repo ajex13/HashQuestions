@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'will_paginate', '~> 3.1.0'
 #gem 'carrierwave', '~> 1.0'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+gem 'devise', '~> 4.2', '>= 4.2.1'
+gem 'devise-bootstrapped', '~> 0.1.1'
+gem 'font-awesome-sass'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

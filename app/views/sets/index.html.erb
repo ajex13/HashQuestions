@@ -1,14 +1,14 @@
 
 
 <div class="container">
-
+<br>
 <pre>
   Contribute to this question library! Become an admin to add questions directly or upload a file here.
   We will examine the file and add questions on your behalf.
   Please provide the file in question/answer format.
 </pre>
-
-  <div class="panel panel-primary">
+<br>
+  <div class="panel panel-default">
     <div class="panel panel-heading">
       Upload a file
     </div>
@@ -16,11 +16,11 @@
       <%=form_for :upload, url: sets_upload_file_path do |f|   %>
         <%= f.file_field :file  %>
         <hr>
-        <%= f.submit :upload! ,class: "btn btn-primary"%>
+        <%= f.submit :upload! ,class: "btn btn-default"%>
       <% end %>
     </div>
   </div>
-  <div class="panel panel-primary">
+  <div class="panel panel-default">
     <div class="panel panel-heading">
       Download a file
     </div>
@@ -34,7 +34,7 @@
 
       </pre>
       <%= f.text_field :fileName , class: "form-control"%><br>
-      <%= f.submit :download! ,class: "btn btn-primary" %>
+      <%= f.submit :download! ,class: "btn btn-default" %>
       <% end %>
     </div>
   </div>
