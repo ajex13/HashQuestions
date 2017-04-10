@@ -51,6 +51,8 @@ before_action :set_item, :only => [:show,:edit,:update,:destroy]
   def show
   end
 
+
+
   private
   def set_item
     @item = Item.find(params[:id])

@@ -1,0 +1,47 @@
+
+
+<div class="container">
+
+<pre>
+  Contribute to this question library! Become an admin to add questions directly or upload a file here.
+  We will examine the file and add questions on your behalf.
+  Please provide the file in question/answer format.
+</pre>
+
+  <div class="panel panel-primary">
+    <div class="panel panel-heading">
+      Upload a file
+    </div>
+    <div class="panel panel-body">
+      <%=form_for :upload, url: sets_upload_file_path do |f|   %>
+        <%= f.file_field :file  %>
+        <hr>
+        <%= f.submit :upload! ,class: "btn btn-primary"%>
+      <% end %>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel panel-heading">
+      Download a file
+    </div>
+    <div class="panel panel-body">
+      List of uploaded files:
+      <%= form_for :download, url: sets_download_file_path do |f| %>
+      <pre>
+      <% Dir.foreach("saved_files") do |x| %>
+      <%= "- #{x}" %>
+      <% end %>
+
+      </pre>
+      <%= f.text_field :fileName , class: "form-control"%><br>
+      <%= f.submit :download! ,class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>

@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ .jumbotron {
+     color: white !important;
+     background-color: #ff554c !important;
+ }
+
+.navbar-brand {
+  color: #ff554c !important;
+  font-weight: 600;
+
+}

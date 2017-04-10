@@ -1,16 +1,10 @@
+
 <div class="container">
-  <h2>Index</h2>
 
 
-<div class="row">
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myCreateModal">
-    Add a Question!
-  </button>
+<hr>
 
-</div>
-
-<br>
+  <%= will_paginate @items, renderer: BootstrapPagination::Rails %>
 
 
 
@@ -19,7 +13,7 @@
     <%= render @items %>
   </div>
 
-  <%= will_paginate @posts %>
+  <%= will_paginate @items, renderer: BootstrapPagination::Rails %>
 
 
 
