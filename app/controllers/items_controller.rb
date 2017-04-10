@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 before_action :set_item, :only => [:show,:edit,:update,:destroy]
 
   def index
-    @items = Item.all.order("created_at DESC")
+    @items = Item.paginate(:page => params[:page], :per_page => 5).order("created_at DESC")
     @item = Item.new
   end
 
