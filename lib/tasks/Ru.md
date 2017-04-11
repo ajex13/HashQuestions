@@ -357,8 +357,8 @@ A: As a private instance method of Object, whose value of self resolves to the s
 Q: What is the origin of the "keywords" public, private, and protected?
 A: They are instance methods of the Module class. Since Class subclasses Module, the methods can be invoked without explicit reference to self such as self.private.
 
-Q: Describe the method name resolution process.
-A:
+ Describe the method name resolution process.
+
 
 Check eigenclass for singleton methods including inheritance of eigenclasses on class objects.
 Check for instance methods.
@@ -449,7 +449,7 @@ class MyClass
     MY_CONSTANT = "hello"
   end
 end
-A: A constant cannot be assigned within the body of a method. Dynamic constant assignment is not allowed.
+ A constant cannot be assigned within the body of a method. Dynamic constant assignment is not allowed.
 
 Classes
 
