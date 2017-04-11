@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description:
+Add questions and answers of ruby and rails to website!
+Discuss the questions and their explaination with the community for further clarity!
+Close
 
-Things you may want to cover:
+fuctionality so far:
+user login/logout
+CRUD items by AJAX
+chosenjs for multi-select categories
+searchkick to search questions
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+note:
+questions taken from repo : nick-brown/ruby-interview-questions
