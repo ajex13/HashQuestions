@@ -44,9 +44,9 @@ A: SecureRandom
 Q: Where does scope change in a Ruby program?
 A: At module, class, and def.
 
-Data Types
+C:Data Types
 
-String
+C:String
 
 Q: Are strings mutable?
 A: Yes.
@@ -72,7 +72,7 @@ A: #each_char
 Q: What is the difference between a character literal such as ?A and a string literal such as "A"?
 A: There is no difference in Ruby 1.9+.
 
-Symbol
+C:Symbol
 
 Q: What is a symbol?
 A: Symbols are scalar value objects used as identifiers, mapping immutable strings to fixed internal values.
@@ -89,7 +89,7 @@ A: The colon is an initializer of the class Symbol.
 Q: True or False: It's possible to initialize a symbol with Symbol.new?
 A: False
 
-Numeric
+C:Numeric
 
 Q: Are Numeric objects mutable?
 A: No.
@@ -109,7 +109,7 @@ A: Numeric
 Q: What numeric class might you use to avoid the rounding error inherent in the use of binary floating-point arithmetic?
 A: BigDecimal
 
-Array
+C:Array
 
 Q: What method might you use to remove duplicate values from an array?
 A: #uniq
@@ -127,7 +127,7 @@ A: True
 Q: True or False: This will throw an exception a, b = 1, 2, 3, 4
 A: False
 
-Hash
+C:Hash
 
 Q: Name one synonym for #key??
 A: #has_key?, #include?, #member?
@@ -153,12 +153,12 @@ A: It provides options for handling the case where a key does not exist in the h
 Q: When would you need to use Hash#rehash?
 A: After you mutate a mutable hash key.
 
-Range
+C:Range
 
 Q: What are two uses of ranges?
 A: comparison, iteration
 
-Regexp
+C:Regexp
 
 Q: What is the regular expression modifier to ignore case?
 A: i
@@ -175,7 +175,7 @@ A: $LAST_MATCH_INFO equivalent to $~
 Q: What does the %r syntax allow and why is it useful?
 A: It creates a Regexp object, but you don't have to escape /
 
-Operators
+C:Operators
 
 Q: What are two uses of the splat operator?
 A: Explode/expand the elements of an array. Collect arguments of a parameter list into an array.
@@ -210,7 +210,7 @@ A: &&
 Q: What is the arity of an operator?
 A: The number of values the operator performs on.
 
-Control Structures
+C:Control Structures
 
 Q: What is a statement modifier?
 A: A condition after a statement such as with x = 1 if a == true
@@ -233,7 +233,7 @@ A: It shows intent. It DRY's out the condition.
 Q: What are some disadvantages of a case statement versus repeated elsif statements?
 A: The statement is typically resistant to modification without a complete refactoring of the entire control structure. The case statement can be confusing if multiple comma-separated expressions are associated with a single when clause.
 
-Blocks and Iterators
+C:Blocks and Iterators
 
 Q: Name three methods of the Enumerable module.
 A: #each, #map, #select, #find, #inject...
@@ -286,7 +286,7 @@ A: It doesn't have a name. It doesn't exist beyond it's execution unless convert
 Q: How does block invocation differ from method invocation?
 A: Ruby will throw an exception if more than the expected number of arguments are passed to a method. A block will simply ignore the extra values in Ruby 1.9+.
 
-Methods
+C:Methods
 
 Q: Can methods be overloaded?
 A: No.
@@ -377,7 +377,7 @@ A: #undef_method prevents any invocation of the method through an instance of th
 Q: Explain how Ruby syntax supports object specifiers in parameters lists?
 A: You can leave off the curly brackets from a hash in a parameter list, assuming it is the only argument in the list.
 
-Procs and Lambdas
+C:Procs and Lambdas
 
 Q: What are the two varieties of Proc objects?
 A: Procs and lambdas.
@@ -400,7 +400,7 @@ A: There must be a block associated with lambda invocation. Lambdas must be invo
 Q: When might you encounter a LocalJumpError?
 A: You would encounter this exception when attempting to return from a method that has already returned such as if you attempt to return from a Proc object whose lexically enclosing method has already returned.
 
-Closures
+C:Closures
 
 Q: What is a closure?
 A: A closure is an object that is both an invocable function together with a variable binding. The object retains access to the local variables that were in scope at the time of the object definition.
@@ -414,7 +414,7 @@ A: The values of the variables are looked up when the Proc object is executed.
 Q: Is it possible to alter a closure?
 A: Yes, you can access and alter the binding of a closure with #binding.
 
-Method Objects
+C:Method Objects
 
 Q: What must you do first before you can invoke an UnboundMethod object?
 A: Bind it to a receiver object using #bind.
@@ -428,7 +428,7 @@ A: Using Object#method
 Q: How do you obtain an UnboundMethod object from an existing module/class?
 A: Using Module#instance_method
 
-Constants
+C:Constants
 
 Q: Are constants public or private?
 A: Public.
@@ -451,7 +451,7 @@ class MyClass
 end
  A constant cannot be assigned within the body of a method. Dynamic constant assignment is not allowed.
 
-Classes
+C:Classes
 
 Q: What does #attr_accessor do?
 A: Creates getter and setter methods for all the symbols naming attributes it is passed as arguments.
@@ -531,7 +531,7 @@ A: #clone copies the frozen state of an object and any singleton methods of an o
 Q: Why might you not need to pass any arguments to the #initialize method of a singleton class?
 A: Since there is only one instance of the class, there will only be one variation of the instance so any values it contains may be set explicitly from within the class definition (such as in the #initialize method itself).
 
-Modules
+C:Modules
 
 Q: What are the two functions of modules?
 A: As mixins or as namespaces.
@@ -562,7 +562,7 @@ Q: Inferring from the behavior of Module#include, is this method a public or pri
 Q: What does #module_function do?
 A: Makes class copies of the specified methods and makes instance methods private.
 
-Structs
+C:Structs
 
 Q: What is a Struct in Ruby?
 A: A core Ruby class that generates other classes containing accessor methods for the specified fields.
@@ -570,7 +570,7 @@ A: A core Ruby class that generates other classes containing accessor methods fo
 Q: Can you add methods to a Struct?
 A: Yes.
 
-Inheritance
+C:Inheritance
 
 Q: What's the difference between #is_a? and #instance_of??
 A: #instance_of? ignores inheritance and any mixed-in modules.
@@ -599,7 +599,7 @@ A: Overriding private methods or overwriting class variables.
 Q: How might you prevent a method on a superclass from being inherited by a subclass?
 A: Override the method on the subclass or undef the method in the subclass.
 
-Metaprogramming
+C:Metaprogramming
 
 Q: Name one method in Ruby core that might be considered "metaprogramming."
 A: #attr_reader, #attr_accessor, #define_method, #method_missing, #const_missing, #eval, #class_eval, #instance_eval...
@@ -655,7 +655,7 @@ A: Object
 Q: Where do #local_variables and #global live in the object model?
 A: Kernel
 
-Loading Modules, Files, and Gems
+C:Loading Modules, Files, and Gems
 
 Loading
 
@@ -677,7 +677,7 @@ A: #require_relative ignores the load path.
 Q: What does #autoload do?
 A: Allows lazy-loading of files when a constant assigned to a file is first referenced.
 
-Files
+C:Files
 
 Q: What does File#expand_path do?
 A: Converts a relative path to a fully qualified path.
@@ -688,7 +688,7 @@ A: #entries or #foreach
 Q: What is an IO object?
 A: An IO object is an instance of class IO that can be used for reading or writing binary data to and from a file.
 
-Gems
+C:Gems
 
 Q: In Ruby 1.9+, are RubyGems installation directories included in $LOAD_PATH?
 A: Yes.
@@ -699,7 +699,7 @@ A: The Gem with the highest version number.
 Q: In Ruby 1.9+, how would you alter the default version of a Gem that will be used?
 A: Using Kernel#gem.
 
-Security
+C:Security
 
 Q: What can you say about objects derived from tainted objects?
 A: They will also be tainted.
@@ -713,7 +713,7 @@ A: You cannot lower the $SAFE level. It can only be raised.
 Q: What is the difference between taint and trust?
 A: Taint is derived from the environment such as the command line, environment variables, files, sockets, etc..., while trust is derived from the $SAFE level of the originating code. Untrusted objects are both untrusted and tainted.
 
-Exceptions
+C:Exceptions
 
 Q: What error is raised if a method is passed the wrong number of arguments?
 A: ArgumentError
@@ -730,7 +730,7 @@ A: Just raises a NoMethodError.
 Q: What happens if you attempt to redefine BasicObject#__send__?
 A: Ruby issues a warning.
 
-Debugging
+C:Debugging
 
 Q: What is the difference between #to_s and #inspect?
 A: #inspect is the same as #to_s, except for that some classes redefine #inspect to provide output that is more helpful in debugging.
@@ -753,7 +753,7 @@ A: The name as a symbol of the currently executing method.
 Q: In Ruby 1.9+, what is the synonym of Kernel#__method__?
 A: Kernel#__callee__
 
-The Ruby Environment and the Interpreter
+C:The Ruby Environment and the Interpreter
 
 Q: What does MRI most commonly stand for?
 A: Matz's Ruby Interpreter

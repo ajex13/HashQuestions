@@ -8,12 +8,16 @@ task :setup_data => :environment do
 
   rel_q = lines.find_all {|line| line.include?("Q:")}
   rel_a = lines.find_all {|line| line.include?("A:")}
+  rel_c = lines.find_all {|line| line.include?("C:")}
+
+
 
   (0..rel_q.size-1).each do |i|
 
     item = Item.new
     item.question = rel_q[i].split(' ')[1..-1].join(' ')
     item.answer = rel_a[i].split(' ')[1..-1].join(' ')
+    item.user_id = 1
     item.save
 
   end

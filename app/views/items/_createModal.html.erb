@@ -10,12 +10,12 @@
         <%= form_for(@item,:remote => true ) do |f| %>
         <div class="field">
           <%= f.label :question %> <br>
-          <%= f.text_area :question , :class => "form-control item-question" %>
+          <%= f.text_area :question ,:class => "form-control item-question", :required => true %>
         </div>
         <br>
         <div class="field">
           <%= f.label :answer %> <br>
-          <%= f.text_area :answer , :class => "form-control item-answer"  %>
+          <%= f.text_area :answer , :class => "form-control item-answer" , :required => true  %>
         </div>
         <br>
         <div class="field">
