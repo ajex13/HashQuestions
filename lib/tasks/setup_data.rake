@@ -22,7 +22,7 @@ task :setup_data => :environment do
     item = Item.new
     item.question = rel_q[i].split(' ')[1..-1].join(' ')
     item.answer = rel_a[i].split(' ')[1..-1].join(' ')
-    item.user_id = 99
+    item.user_id = 1
     item.save
 
   end
