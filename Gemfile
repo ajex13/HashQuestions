@@ -38,7 +38,7 @@ gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'devise-bootstrapped', '~> 0.1.1'
 gem 'font-awesome-sass'
 gem 'chosen-rails', '~> 1.5', '>= 1.5.2'
-gem 'searchkick'
+#gem 'searchkick'
 
 
 # Use Capistrano for deployment

@@ -4,11 +4,11 @@ before_action :set_item, :only => [:show,:edit,:update,:destroy]
 
   def index
 
-    if params[:search].present?
-    @items = Item.search(params[:search], page: params[:page], per_page: 5)
-    else
+    #if params[:search].present?
+    #@items = Item.search(params[:search], page: params[:page], per_page: 5)
+    #else
     @items = Item.paginate(:page => params[:page], :per_page => 10).order("created_at DESC")
-    end
+    #end
     @item = Item.new
   end
 
