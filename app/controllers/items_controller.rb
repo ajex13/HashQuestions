@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+before_action :authenticate_user!, except: [:index,:show]
 before_action :set_item, :only => [:show,:edit,:update,:destroy]
 
   def index
@@ -12,6 +13,7 @@ before_action :set_item, :only => [:show,:edit,:update,:destroy]
 
   def create
     @item = Item.new(item_params)
+    @item.user_id = current_user.id
     respond_to do |response|
       if @item.save
         response.html {redirect_to @item}
