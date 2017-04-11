@@ -10,6 +10,11 @@ task :setup_data => :environment do
   rel_a = lines.find_all {|line| line.include?("A:")}
   rel_c = lines.find_all {|line| line.include?("C:")}
 
+  (0..rel_c.size-1).each do |i|
+    category = Category.new
+    category.name = rel_c[i].split(' ')[1..-1].join(' ')
+    category.save
+  end
 
 
   (0..rel_q.size-1).each do |i|
@@ -17,7 +22,7 @@ task :setup_data => :environment do
     item = Item.new
     item.question = rel_q[i].split(' ')[1..-1].join(' ')
     item.answer = rel_a[i].split(' ')[1..-1].join(' ')
-    item.user_id = 1
+    item.user_id = 99
     item.save
 
   end
