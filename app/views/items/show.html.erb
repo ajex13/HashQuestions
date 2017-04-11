@@ -1,0 +1,15 @@
+
+<div class="container ">
+  
+  <br>
+  <div class="well well-lg disqus-well">
+    <label>Question:</label><br>
+    <%=  @item.question.html_safe %><br>
+    <hr>
+    <label>Answer:</label><br>
+    <%= @item.answer.html_safe %><br>
+
+    <hr>
+    <%= render 'disqus' %>
+  </div>
+</div>
