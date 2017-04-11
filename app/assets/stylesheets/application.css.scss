@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require chosen
  */
  @import "font-awesome-sprockets";
  @import "font-awesome";
@@ -46,4 +47,8 @@
     font-weight: 700;
     letter-spacing: 1px;
 
+}
+
+.chosen-container{
+  width: 100% !important;
 }

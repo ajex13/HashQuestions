@@ -17,8 +17,14 @@
           <%= f.label :answer %> <br>
           <%= f.text_area :answer , :class => "form-control item-answer"  %>
         </div>
-
+        <br>
+        <div class="field">
+          <%=f.label :category_id  %> <br>
+          <%= f.collection_select :category_ids, Category.order(:name), :id, :name,{ include_blank: true },
+         { multiple:true,class: 'chosen-select item-category', 'data-placeholder': " " }  %>
+        </div>
       </div>
+      <br>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <%= submit_tag "Create", :class => "btn btn-primary" %>

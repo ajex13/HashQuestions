@@ -61,7 +61,7 @@ before_action :set_item, :only => [:show,:edit,:update,:destroy]
   end
 
   def item_params
-    params.require(:item).permit(:question,:answer)
+    params.require(:item).permit(:question,:answer,:category_ids => [])
   end
 
 end

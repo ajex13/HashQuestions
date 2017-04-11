@@ -2,6 +2,7 @@
 $("#myCreateModal").modal('hide');
 $('.item-question').val('');
 $(".item-answer").val('');
+$(".item-category").val('').trigger('chosen:updated');;
 
-$('#container_items').prepend("<%= j render @item %>");
+$('#container_items').prepend("<%= j(render @item).html_safe %>").trigger("turbolinks:load");
 $("#item_<%= @item.id %>").hide().fadeIn(1000);
